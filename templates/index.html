@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Form</title>
+</head>
+<body>
+
+<h2>Register Student</h2>
+
+<form id="form">
+    <input placeholder="RegNo" id="regno"><br>
+    <input placeholder="Second Name" id="secondname"><br>
+    <input placeholder="Surname" id="surname"><br>
+    <input placeholder="Course" id="course"><br>
+    <input placeholder="County" id="county"><br>
+    <input placeholder="Gender" id="gender"><br>
+    <input placeholder="Department" id="department"><br>
+    <input placeholder="School" id="school"><br>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const data = {
+        regno: regno.value,
+        secondname: secondname.value,
+        surname: surname.value,
+        course: course.value,
+        county: county.value,
+        gender: gender.value,
+        department: department.value,
+        school: school.value
+    };
+
+    const res = await fetch("/add", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+    alert(result.status);
+});
+</script>
+
+</body>
+</html>
