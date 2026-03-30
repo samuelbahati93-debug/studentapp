@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../serious"
+		},
+		{
+			"path": "templates"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "templates"
+	}
+}

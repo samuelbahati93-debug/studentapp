@@ -6,10 +6,10 @@ app = Flask(__name__)
 # 🔗 Connect to Supabase PostgreSQL
 def connect_db():
     return psycopg2.connect(
-        host="db.dkayscawbzqxnhjbqvfk.supabase.co",
+        host="db.uhqwblobwtcrgdzzjkpg.supabase.co",
         database="postgres",
         user="postgres",
-        password="deadz4g1p0ssword",  # 🔥 replace this
+        password="asKnN2Beg2PRjyrn",  # 🔥 replace this
         port="5432"
     )
 
